@@ -1,0 +1,10 @@
+{
+  "frontend/src/index.css": "Global styles with warm amber/orange OKLCH color system for dark theme, custom typography scale, smooth scrolling, and utility classes for sections and gradient text effects.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with warm amber/orange color palette, custom shadows (glow effects), animations (fade-in, slide-in), and Space Grotesk display font family.",
+  "frontend/src/App.tsx": "Main application component that wraps the entire marketing site with ThemeProvider and renders the navbar, hero, features, how-it-works, roadmap, FAQ sections, and footer.",
+  "frontend/src/components/MarketingNavbar.tsx": "Responsive navigation bar with logo, desktop menu, mobile hamburger menu, smooth scroll anchor links, and primary CTA button with keyboard accessibility.",
+  "frontend/src/components/Sections.tsx": "Contains Hero section with stats and illustration, Features grid with 6 cards, How It Works 4-step process, and Footer with link groups and social icons.",
+  "frontend/src/components/RoadmapTimeline.tsx": "Product roadmap section displaying 4 quarterly milestones with status badges (completed/in-progress/planned) and feature lists in a responsive card grid.",
+  "frontend/src/components/FAQAccordion.tsx": "Accessible FAQ section with 8 expandable accordion items using Radix UI primitives, styled with hover states and smooth animations.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for future React Query hooks when backend functionality is added."
+}

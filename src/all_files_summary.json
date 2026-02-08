@@ -1,0 +1,19 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no logic.",
+  "feature_evidence.json": "Feature evidence report describing implemented marketing site features, theme, and asset usage.",
+  "frontend-file-summaries.txt": "Text file containing short summaries of all frontend component files.",
+  "frontend/index.css": "Tailwind base styles plus custom OKLCH theme variables for light and dark modes.",
+  "frontend/index.html": "HTML entry point loading the root div and main React script.",
+  "frontend/src/App.tsx": "Top-level React app rendering navbar, main sections, roadmap, FAQ, and footer within a dark theme.",
+  "frontend/src/components/FAQAccordion.tsx": "FAQ section rendering 8 accordion items using Radix UI components.",
+  "frontend/src/components/MarketingNavbar.tsx": "Responsive navbar with logo, desktop links, mobile menu, and smooth-scroll navigation.",
+  "frontend/src/components/RoadmapTimeline.tsx": "Roadmap section displaying quarterly milestones with icons, badges, and feature lists.",
+  "frontend/src/components/Sections.tsx": "Hero, Features, How It Works, and Footer components with images, icons, cards, and CTA buttons.",
+  "frontend/src/hooks/useActor.ts": "Creates and manages a backend actor using React Query, updating it when the user's Internet Identity changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides an authentication context using Internet Identity, handling login, identity loading, and status tracking.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks; currently contains no logic.",
+  "frontend/src/index.css": "Defines Tailwind CSS base styles, theme variables, typography, layout utilities, and dark mode rules.",
+  "frontend/src/main.tsx": "Bootstraps the React app with QueryClient and InternetIdentityProvider, then renders the root component.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, animations, typography, and plugins for styling the frontend.",
+  "project_state.json": "Stores metadata about the project, including goals, features, assets requirements, and project status."
+}

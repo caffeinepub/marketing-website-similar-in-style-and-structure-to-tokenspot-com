@@ -1,0 +1,121 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Token-style marketing landing page (original content/assets)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a responsive, multi-section marketing homepage with anchored navigation, interactive FAQ accordion, and footer link groups (original copy/layout inspired by reference).",
+      "acceptanceCriteria": [
+        "Homepage renders all required sections in a clear order and resembles a modern crypto/product landing page structure similar to the reference site (without duplicating content).",
+        "Navigation allows jumping to page sections (anchor links) and works on mobile and desktop.",
+        "FAQ items expand/collapse with accessible keyboard interaction.",
+        "All sections are responsive and readable on common breakpoints (mobile/tablet/desktop)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page marketing layout containing: top navbar (desktop + mobile), hero with headline/subheadline + primary CTA, features/benefits, how-it-works, roadmap/timeline, FAQ accordion, and footer with link groups. Wire section anchor ids for in-page navigation and ensure responsive section spacing/typography with Tailwind. Use original English copy only."
+        },
+        {
+          "path": "frontend/src/components/MarketingNavbar.tsx",
+          "operation": "create",
+          "description": "Add a responsive navbar with section anchor links and a mobile disclosure/menu button; include a primary CTA button. Ensure keyboard-accessible navigation and focus states. (Do not copy reference branding/text.)"
+        },
+        {
+          "path": "frontend/src/components/FAQAccordion.tsx",
+          "operation": "create",
+          "description": "Implement an accessible accordion for the FAQ section (button + aria-expanded/aria-controls, roving focus or standard tabbing, enter/space toggles). Ensure multiple items can be opened/closed per intended behavior and that content is readable on mobile."
+        },
+        {
+          "path": "frontend/src/components/RoadmapTimeline.tsx",
+          "operation": "create",
+          "description": "Create a roadmap/timeline section component styled as a modern product timeline (cards/steps) with responsive layout (stack on mobile, multi-column on larger screens)."
+        },
+        {
+          "path": "frontend/src/components/Sections.tsx",
+          "operation": "create",
+          "description": "Add reusable presentational section components for Hero, Features, HowItWorks, and Footer to keep App.tsx concise; ensure each section exposes a stable id for anchor navigation and uses Tailwind responsive utilities."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Define and apply a cohesive warm dark visual theme (non-blue/purple primary) across typography, spacing, and component styles using Tailwind + CSS variables.",
+      "acceptanceCriteria": [
+        "A consistent design system is evident across headings, buttons, cards, and section spacing.",
+        "Primary/secondary button styles are consistent across the page.",
+        "Theme uses a non-blue/purple primary color palette by default."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define the site theme using CSS variables consumed by Tailwind (background/foreground, card, border, primary/secondary, radius), selecting a warm non-blue/purple primary (e.g., amber/orange) suitable for a modern dark landing page. Include base typography defaults, smooth scrolling, and consistent focus ring styling."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Adjust/extend Tailwind theme tokens as needed to support the warm dark palette and consistent component styling (e.g., additional gradient/background utilities or semantic colors) while keeping primary non-blue/purple. Ensure content paths remain correct."
+        },
+        {
+          "path": "frontend/src/components/MarketingNavbar.tsx",
+          "operation": "modify",
+          "description": "Apply the defined design system to navbar elements (button variants, link hover/focus states, mobile menu styling) to ensure consistency with the global theme."
+        },
+        {
+          "path": "frontend/src/components/Sections.tsx",
+          "operation": "modify",
+          "description": "Apply consistent section spacing, heading hierarchy, card styles, and button variants across hero/features/how-it-works/footer using the global theme tokens (Tailwind + CSS variables)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add required generated static images under frontend/public/assets/generated and reference them in the homepage UI (logo, hero illustration, feature icons sprite, background pattern).",
+      "acceptanceCriteria": [
+        "All required generated images exist at frontend/public/assets/generated and are referenced by the UI.",
+        "Images are optimized for web display and scale appropriately across breakpoints.",
+        "No images are fetched from the reference site at runtime."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/brand-logo.dim_512x160.png",
+          "operation": "create",
+          "description": "Add the generated wordmark logo image asset at this exact path for use in the navbar and footer."
+        },
+        {
+          "path": "frontend/public/assets/generated/hero-illustration.dim_1400x900.png",
+          "operation": "create",
+          "description": "Add the generated hero illustration image asset at this exact path for use in the hero section."
+        },
+        {
+          "path": "frontend/public/assets/generated/feature-icons-sprite.dim_1024x256.png",
+          "operation": "create",
+          "description": "Add the generated feature icon sprite at this exact path for use in the features section (6 icons in consistent line style)."
+        },
+        {
+          "path": "frontend/public/assets/generated/bg-pattern.dim_1600x1600.png",
+          "operation": "create",
+          "description": "Add the generated seamless background pattern image asset at this exact path for use as subtle section backgrounds on dark areas."
+        },
+        {
+          "path": "frontend/src/components/MarketingNavbar.tsx",
+          "operation": "modify",
+          "description": "Reference frontend/public/assets/generated/brand-logo.dim_512x160.png in the navbar (and ensure it scales properly and has appropriate alt text)."
+        },
+        {
+          "path": "frontend/src/components/Sections.tsx",
+          "operation": "modify",
+          "description": "Reference frontend/public/assets/generated/hero-illustration.dim_1400x900.png in the hero section; reference frontend/public/assets/generated/feature-icons-sprite.dim_1024x256.png in the features section; apply frontend/public/assets/generated/bg-pattern.dim_1600x1600.png as a subtle background where appropriate. Ensure responsive sizing and avoid fetching any external/reference-site images."
+        },
+        {
+          "path": "frontend/src/components/Sections.tsx",
+          "operation": "modify",
+          "description": "Ensure all image usage includes responsive dimensions (Tailwind) and appropriate loading behavior (e.g., avoid layout shift) while keeping assets local under frontend/public/assets/generated."
+        }
+      ]
+    }
+  ]
+}

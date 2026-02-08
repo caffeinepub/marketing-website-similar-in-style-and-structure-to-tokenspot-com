@@ -1,0 +1,73 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-08T19:07:37.526Z",
+  "summary": "Diff adds a React+TS+Tailwind single-page marketing layout with navbar, hero, features, how-it-works, roadmap, FAQ accordion, and footer, plus a warm amber/orange dark theme. However, the required generated image assets are not shown as added under frontend/public/assets/generated, and feature icons sprite usage is not evident. The diff also introduces Internet Identity/react-query/backend scaffolding and strongly trading-focused copy that was not requested and conflicts with stated non-goals.",
+  "missing_requirements": [
+    {
+      "id": "REQ-3",
+      "requirement": "Add required static generated images to frontend/public/assets/generated and use them in the homepage (logo, hero illustration, feature icons sprite, background pattern).",
+      "reason": "Components reference images under /assets/generated, but the diff does not show any files added under frontend/public/assets/generated. Also, the required feature-icons sprite is not shown being used; features appear to use lucide-react icons instead.",
+      "evidence": [
+        "frontend/src/components/MarketingNavbar.tsx (references /assets/generated/brand-logo.dim_512x160.png)",
+        "frontend/src/components/Sections.tsx (references /assets/generated/hero-illustration.dim_1400x900.png and /assets/generated/bg-pattern.dim_1600x1600.png; uses lucide-react icons for features)",
+        "File diff summary (ADDED FILES list does not include frontend/public/assets/generated/*)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity authentication/provider and authenticated actor/react-query scaffolding added even though auth was not required for this marketing site.",
+      "reason": "BuildRequest states Internet Identity is the only supported auth but \"not required for this marketing site unless explicitly requested later\"; diff adds InternetIdentityProvider and hooks regardless.",
+      "evidence": [
+        "frontend/src/main.tsx (wraps app with InternetIdentityProvider and QueryClientProvider)",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Backend canister stub added (Motoko actor) despite no backend requirements for the marketing site.",
+      "reason": "BuildRequest focuses on frontend marketing website; no backend work requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Marketing content describes/markets token trading, wallets, fees, margin trading, staking, NFT marketplace, and other financial/product features.",
+      "reason": "Non-goals explicitly exclude token trading, wallets, staking, on-chain transactions, or any financial features; the site copy and roadmap heavily emphasize these.",
+      "evidence": [
+        "frontend/src/components/FAQAccordion.tsx (trading platform, fees, funding wallet, withdrawals, mobile trading apps, supported tokens)",
+        "frontend/src/components/Sections.tsx (CTA \"Start Trading\", trading/volume stats, copy about trading/managing tokens)",
+        "frontend/src/components/RoadmapTimeline.tsx (margin trading, staking rewards, DEX launch, mobile wallet, fiat on-ramp, custody, AI trading tools)"
+      ]
+    },
+    {
+      "description": "Social media icon integration via react-icons added without being requested.",
+      "reason": "BuildRequest does not request social link icons specifically (only footer with link groups).",
+      "evidence": [
+        "frontend/src/components/Sections.tsx (imports SiFacebook, SiX, SiLinkedin, SiGithub)"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/FAQAccordion.tsx",
+    "frontend/src/components/MarketingNavbar.tsx",
+    "frontend/src/components/RoadmapTimeline.tsx",
+    "frontend/src/components/Sections.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

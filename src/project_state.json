@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a website similar to https://tokenspot.com/en.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Wordmark logo with simple geometric mark, warm dark theme friendly (tokenspot-like modern style but original) (brand-logo.dim_512x160.png)\n- Hero illustration: abstract 3D coins/tokens with subtle glow on dark background, original composition (hero-illustration.dim_1400x900.png)\n- Set of 6 minimalist feature icons (security, speed, transparency, community, rewards, analytics) in consistent line style (feature-icons-sprite.dim_1024x256.png)\n- Subtle seamless background pattern (abstract grid/particles) suitable for dark sections (bg-pattern.dim_1600x1600.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-multi-section-marketing-website-inspired-by-the-layout-and-interaction-patterns-of-https-tokenspot-com-en-using-original-content-and-assets-do-not-copy-text-images-from-the-reference-site-include-at-minimum-a-top-navigation-bar-a-hero-section-with-a-clear-headline-subheadline-and-primary-cta-button-a-features-benefits-section-a-how-it-works-section-a-roadmap-timeline-section-an-faq-accordion-and-a-footer-with-link-groups",
+      "title": "Create a responsive, multi-section marketing website inspired by the layout and interaction patterns of https://tokenspot.com/en, using original content and assets (do not copy text/images from the reference site). Include at minimum: a top navigation bar, a hero section with a clear headline/subheadline and primary CTA button, a features/benefits section, a how-it-works section, a roadmap/timeline section, an FAQ accordion, and a footer with link groups.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-define-and-apply-a-coherent-visual-theme-for-the-site-colors-typography-spacing-components-with-a-distinct-style-appropriate-for-a-modern-token-product-landing-page-avoid-a-blue-purple-primary-palette-unless-explicitly-requested",
+      "title": "Define and apply a coherent visual theme for the site (colors, typography, spacing, components) with a distinct style appropriate for a modern token/product landing page. Avoid a blue/purple primary palette unless explicitly requested.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-static-generated-images-to-the-project-under-frontend-public-assets-generated-and-use-them-in-the-homepage-e-g-logo-in-navbar-footer-hero-illustration-in-hero-section-feature-icons-in-the-features-section",
+      "title": "Add required static generated images to the project under frontend/public/assets/generated and use them in the homepage (e.g., logo in navbar/footer, hero illustration in hero section, feature icons in the features section).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a website similar to https://tokenspot.com/en",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Marketing website similar in style and structure to tokenspot.com",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

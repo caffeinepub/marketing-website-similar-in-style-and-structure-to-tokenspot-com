@@ -1,0 +1,93 @@
+{
+  "kind": "build_request",
+  "title": "Marketing website similar in style and structure to tokenspot.com",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive, multi-section marketing website inspired by the layout and interaction patterns of https://tokenspot.com/en, using original content and assets (do not copy text/images from the reference site). Include at minimum: a top navigation bar, a hero section with a clear headline/subheadline and primary CTA button, a features/benefits section, a how-it-works section, a roadmap/timeline section, an FAQ accordion, and a footer with link groups.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "create web site like https://tokenspot.com/en"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Homepage renders all required sections in a clear order and resembles a modern crypto/product landing page structure similar to the reference site (without duplicating content).",
+        "Navigation allows jumping to page sections (anchor links) and works on mobile and desktop.",
+        "FAQ items expand/collapse with accessible keyboard interaction.",
+        "All sections are responsive and readable on common breakpoints (mobile/tablet/desktop)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Define and apply a coherent visual theme for the site (colors, typography, spacing, components) with a distinct style appropriate for a modern token/product landing page. Avoid a blue/purple primary palette unless explicitly requested.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "create web site like https://tokenspot.com/en"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A consistent design system is evident across headings, buttons, cards, and section spacing.",
+        "Primary/secondary button styles are consistent across the page.",
+        "Theme uses a non-blue/purple primary color palette by default."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add required static generated images to the project under frontend/public/assets/generated and use them in the homepage (e.g., logo in navbar/footer, hero illustration in hero section, feature icons in the features section).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "create web site like https://tokenspot.com/en"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist at frontend/public/assets/generated and are referenced by the UI.",
+        "Images are optimized for web display and scale appropriately across breakpoints.",
+        "No images are fetched from the reference site at runtime."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend must be built with React + TypeScript and styled with Tailwind; compose existing UI components rather than editing any read-only component sources under frontend/src/components/ui.",
+    "No third-party authentication integrations; Internet Identity is the only supported auth (not required for this marketing site unless explicitly requested later).",
+    "Use original copy and original/generated visual assets; do not reuse/copy tokenspot.com text, branding, or images."
+  ],
+  "nonGoals": [
+    "Implementing token trading, wallets, staking, on-chain transactions, or any financial features.",
+    "Building an admin dashboard/CMS for editing page content.",
+    "Adding real-time chat, push notifications, or third-party social login."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Wordmark logo with simple geometric mark, warm dark theme friendly (tokenspot-like modern style but original) (brand-logo.dim_512x160.png)",
+      "Hero illustration: abstract 3D coins/tokens with subtle glow on dark background, original composition (hero-illustration.dim_1400x900.png)",
+      "Set of 6 minimalist feature icons (security, speed, transparency, community, rewards, analytics) in consistent line style (feature-icons-sprite.dim_1024x256.png)",
+      "Subtle seamless background pattern (abstract grid/particles) suitable for dark sections (bg-pattern.dim_1600x1600.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "User-facing text must be in English."
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
